@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>在线订购 - 佛牌</title>
+<meta name="generator" content="WFPHP订单系统【高级版】">
+<meta name="author" content="系统开发者：WENFEI QQ：183712356">
+<meta name="copyright" content="WFPHP订单系统官网：WFORDER.COM">
+<script type="text/javascript" src="../../wfpublic/js/wfjq.js"></script>
+<script type="text/javascript" src="../../wfpublic/layui/layui.js"></script>
+<script type="text/javascript" src="../../wfpublic/js/wfjqcity.js"></script>
+<script type="text/javascript">
+    $("document").ready(function(){
+		$(".size a").click(function(){
+            var o=$(this);
+            if(!o.hasClass("cursize")){
+				$(".cursize").removeClass("cursize");
+				o.addClass("cursize");
+				$("#wfprosize").val(o.attr("data-size"));
+			}
+		});
+		$(".colour a").click(function(){
+			var o=$(this);
+			if(!o.hasClass("curcolour")){
+				$(".curcolour").removeClass("curcolour");
+				o.addClass("curcolour");
+				$("#wfprocolour").val(o.attr("data-colour"));
+            }
+		});
+	});
+</script>
+<link href="../../wftemplate/weixin/images/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.wforder{max-width:950px;}
+.wftitle{background:#FF9900;}
+</style>
+</head>
+<body>
+<div class="wforder">
+	<form id="wfform" name="wfform" method="post" class="wfform" target="_top">
+		<input type="hidden" name="wfnotnull" value="87b823b44d94251c3ddb">			
+		<input type="hidden" name="wfpid" value="2">
+		<input type="hidden" name="wftid" value="2">
+		<input type="hidden" name="WFDDURL" id="WFDDURL" value="">
+		<input type="hidden" name="wfproname" id="wfproname" value="佛牌">
+						        <input type="hidden" name="wfpayment" id="wfpayment" value="cod">
+		<input type="hidden" name="wfpayzk" id="wfpayzk" value="1">
+		<input type="hidden" name="wfproup" id="wfproup" value="">
+				
+		<input type="hidden" name="wfprice" id="wfprice" value="0.00">
+		<input type="hidden" name="wfuprovince" id="wfuprovince" value="">
+		<input type="hidden" name="wfucity" id="wfucity" value="">
+		<input type="hidden" name="wfismob" id="wfismob" value="">
+		<div class="wftitle">在线快速订购</div>		
+		<!---------- 订购产品 ---------->
+		        <div class="wfwrap">			
+            <div class="wfwrapbox">
+								
+				<!---------- 产品套餐 ---------->
+				<div class="wfform-box">
+					<label class="wfform-label">订购产品</label>
+					<div class="wfform-pro radio">
+						<span class="down"><input type="radio" name="wfproduct" id="wfproduct1" onclick="total('down')" value="属鼠【千手观音】" title="99" class="input-radio"><label for="wfproduct1">属鼠【千手观音】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct2" onclick="total('down')" value="属牛【虚空藏菩萨】" title="99" class="input-radio"><label for="wfproduct2">属牛【虚空藏菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct3" onclick="total('down')" value="属虎【虚空藏菩萨】" title="99" class="input-radio"><label for="wfproduct3">属虎【虚空藏菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct4" onclick="total('down')" value="属兔【文殊菩萨】" title="99" class="input-radio"><label for="wfproduct4">属兔【文殊菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct5" onclick="total('down')" value="属龙【普贤菩萨】" title="99" class="input-radio"><label for="wfproduct5">属龙【普贤菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct6" onclick="total('down')" value="属蛇【普贤菩萨】" title="99" class="input-radio"><label for="wfproduct6">属蛇【普贤菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct7" onclick="total('down')" value="属马【大势至菩萨】" title="99" class="input-radio"><label for="wfproduct7">属马【大势至菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct8" onclick="total('down')" value="属羊【大日如来】" title="99" class="input-radio"><label for="wfproduct8">属羊【大日如来】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct9" onclick="total('down')" value="属猴【大日如来】" title="99" class="input-radio"><label for="wfproduct9">属猴【大日如来】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct10" onclick="total('down')" value="属鸡【不动尊菩萨】" title="99" class="input-radio"><label for="wfproduct10">属鸡【不动尊菩萨】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct11" onclick="total('down')" value="属狗【阿弥陀佛】" title="99" class="input-radio"><label for="wfproduct11">属狗【阿弥陀佛】</label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct12" onclick="total('down')" value="属猪【阿弥陀佛】" title="99" class="input-radio"><label for="wfproduct12">属猪【阿弥陀佛】</label></span>					</div>
+				</div>
+				<!---------- 产品套餐 ---------->
+								
+												<!---------- 数量价格 ---------->
+				<div class="wfform-box">
+					<label class="wfform-label">数量</label>
+					<div class="wfform-opt wfnums">
+						<a onclick="numdec()" title="减1" class="dec"></a>
+						<input type="text" id="wfnums" name="wfnums" value="1" readonly>
+						<a onclick="numlnc()" title="加1" class="lnc"></a>
+						<strong><em class="rmb">&yen;</em><em id="showprice">0.00</em></strong>
+					</div>
+				</div>		
+				<!---------- 数量价格 ---------->
+							</div>            
+		</div>
+        		<!---------- 订购产品 ---------->
+		<!---------- 赠送产品 ---------->
+				<!---------- 赠送产品 ---------->
+		<!---------- 表单主体 ---------->
+		<div class="wfwrap">			
+			<div class="wfwrapbox pt15">
+			<!---------- 表单选项 ---------->
+			<div class="wfform-box">
+				<label class="wfform-label">姓名</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfname" lay-verify="name" placeholder="请填写姓名" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">手机号码</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfmob" id="wfmob" lay-verify="mob" placeholder="请填写手机号码" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">所在地区</label>
+				<div class="wfform-opt area">
+					<span class="wfprovince"><select id="wfprovince" name="wfprovince" lay-verify="province" class="select"></select></span>
+					<span class="wfcity"><select id="wfcity" name="wfcity" lay-verify="city" class="select"></select></span>
+					<span class="wfarea"><select id="wfarea" name="wfarea" class="select"></select></span>	
+				</div>
+			</div><div class="wfform-box">
+				<label class="wfform-label">详细地址</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfaddress" lay-verify="address" placeholder="请填写详细地址" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">留言</label>
+				<div class="wfform-opt">
+					<textarea name="wfguest" placeholder="" class="textarea"></textarea>
+				</div>
+			</div>
+				
+			<!---------- 表单选项 ---------->
+			<!---------- 付款方式 ---------->
+						<div class="wfform-box">
+				<label class="wfform-label">付款方式</label>
+				<div class="wfform-pro radio">				
+										<span class="auto"><input type="radio" checked name="wfpayment" id="wfpayment1" onclick="pay_total(1);paypstab(1)" value="cod" class="input-radio"><label for="wfpayment1">货到付款</label></span>
+										<span id="payps1" class="payps">温馨提示：选择货到付款在家等快递公司送货上门，先验货后付款！</span>
+										<span id="payps2" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps3" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps4" class="payps" style="display:none;">温馨提示：请选择您要在线付款的银行，在线支付，安全可靠！</span>
+										<span id="payps5" class="payps" style="display:none;">温馨提示：提交后请用你的手机登陆支付宝或微信扫描二维码完成付款！</span>
+										<span id="payps6" class="payps" style="display:none;">温馨提示：请拨打我们网站上的免费客服电话，索要银行汇款帐号。</span>
+									</div>
+			</div>
+						
+			<!---------- 付款方式 ---------->
+			<!---------- 验证码 ---------->
+						
+						<!---------- 验证码 ---------->
+			</div>
+		</div>
+		<!---------- 表单主体 ---------->
+		<div class="wfwrap">
+			<div class="wfform-box">
+				<button id="wfsubmit" lay-submit lay-filter="wfsubmit" class="wfbtn btn-g">立即提交订单</button>
+			</div>
+		</div>
+	</form>
+		<script type="text/javascript" src="../../wfpublic/js/wfscroll.js"></script>
+	<script type="text/javascript">$(function(){$('.wffahuo').myScroll({speed:40,rowHeight:55});});</script>
+	<div class="wftitle">发货通知</div>
+	<div class="wfwrap">
+		<div class="wfwrapbox">
+			<div class="wffahuo">
+				<ul>
+					<!-- 生成数量--最近几天--产品数组--发货通知模板 -->
+					<li><span><span class="showdate"></span></span> <span>上海</span>的<span>贾**</span> <span>187****8977</span> 您订购的<span>属猴【大日如来】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>江苏</span>的<span>高**</span> <span>184****1993</span> 您订购的<span>属蛇【普贤菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>宁夏</span>的<span>阎**</span> <span>139****6958</span> 您订购的<span>属兔【文殊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>山西</span>的<span>贾**</span> <span>150****1323</span> 您订购的<span>属猪【阿弥陀佛】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>黑龙江</span>的<span>蒋**</span> <span>187****6954</span> 您订购的<span>属兔【文殊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>湖南</span>的<span>谢**</span> <span>182****5711</span> 您订购的<span>属鼠【千手观音】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>西藏</span>的<span>郭**</span> <span>159****4759</span> 您订购的<span>属马【大势至菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>广西</span>的<span>吴**</span> <span>132****3264</span> 您订购的<span>属兔【文殊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>甘肃</span>的<span>蔡**</span> <span>134****3369</span> 您订购的<span>属马【大势至菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>山西</span>的<span>马**</span> <span>132****3804</span> 您订购的<span>属兔【文殊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>北京</span>的<span>许**</span> <span>188****1606</span> 您订购的<span>属鼠【千手观音】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>湖北</span>的<span>谢**</span> <span>182****8852</span> 您订购的<span>属猴【大日如来】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>青海</span>的<span>阎**</span> <span>157****1432</span> 您订购的<span>属狗【阿弥陀佛】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>贵州</span>的<span>马**</span> <span>187****1801</span> 您订购的<span>属狗【阿弥陀佛】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>云南</span>的<span>邓**</span> <span>177****7920</span> 您订购的<span>属鼠【千手观音】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>山西</span>的<span>萧**</span> <span>183****6824</span> 您订购的<span>属鸡【不动尊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>陕西</span>的<span>徐**</span> <span>139****2654</span> 您订购的<span>属鼠【千手观音】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>天津</span>的<span>卢**</span> <span>183****6855</span> 您订购的<span>属鸡【不动尊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>陕西</span>的<span>董**</span> <span>157****8051</span> 您订购的<span>属兔【文殊菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>辽宁</span>的<span>丁**</span> <span>187****4576</span> 您订购的<span>属马【大势至菩萨】</span>正在安排发货！</li><li><span><span class="showdate"></span></span> <span>浙江</span>的<span>叶**</span> <span>155****3779</span> 您订购的<span>属马【大势至菩萨】</span>正在安排发货！</li>				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wfwrap">
+		<div class="wfwrapbox">
+			<div class="wfquery">
+				<form action="../../wfhome/wfquery.php" method="post" target="_top">
+					<input type="text" name="wfquecont" lay-verify="required" placeholder="请填写姓名或手机号" class="input-text">
+					<button class="wfbtn btn-o btn-que">查询</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div style="height:8px;"></div>			
+		
+</div>
+<script type="text/javascript" src="../../wfpublic/js/wfpost.js"></script>
+</body>
+</html>

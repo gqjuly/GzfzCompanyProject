@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>在线订购 - 冰种黑耀石</title>
+<meta name="generator" content="WFPHP订单系统【高级版】">
+<meta name="author" content="系统开发者：WENFEI QQ：183712356">
+<meta name="copyright" content="WFPHP订单系统官网：WFORDER.COM">
+<script type="text/javascript" src="../../wfpublic/js/wfjq.js"></script>
+<script type="text/javascript" src="../../wfpublic/layui/layui.js"></script>
+<script type="text/javascript" src="../../wfpublic/js/wfjqcity.js"></script>
+<script type="text/javascript">
+    $("document").ready(function(){
+		$(".size a").click(function(){
+            var o=$(this);
+            if(!o.hasClass("cursize")){
+				$(".cursize").removeClass("cursize");
+				o.addClass("cursize");
+				$("#wfprosize").val(o.attr("data-size"));
+			}
+		});
+		$(".colour a").click(function(){
+			var o=$(this);
+			if(!o.hasClass("curcolour")){
+				$(".curcolour").removeClass("curcolour");
+				o.addClass("curcolour");
+				$("#wfprocolour").val(o.attr("data-colour"));
+            }
+		});
+	});
+		var shuxiangshu=1;
+		function num(){
+		var a= parseInt($('.shuxiang:checked').length);
+		if(shuxiangshu<a&&a!=0){
+				numlnc();
+				shuxiangshu=a;
+			}else if(shuxiangshu>a&&a!=0){
+				numdec();
+				shuxiangshu=a;
+			}
+		}
+</script>
+<link href="../../wftemplate/weixin/images/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.wforder{max-width:950px;}
+.wftitle{background:#FF9900;}
+</style>
+</head>
+<body>
+<div class="wforder">
+	<form id="wfform" name="wfform" method="post" class="wfform" target="_top">
+		<input type="hidden" name="wfnotnull" value="41630c7e10c4476d860a">			
+		<input type="hidden" name="wfpid" value="5">
+		<input type="hidden" name="wftid" value="5">
+		<input type="hidden" name="WFDDURL" id="WFDDURL" value="">
+		<input type="hidden" name="wfproname" id="wfproname" value="冰种黑耀石">
+						        <input type="hidden" name="wfpayment" id="wfpayment" value="cod">
+		<input type="hidden" name="wfpayzk" id="wfpayzk" value="1">
+		<input type="hidden" name="wfproup" id="wfproup" value="">
+				
+		<input type="hidden" name="wfprice" id="wfprice" value="0.00">
+		<input type="hidden" name="wfuprovince" id="wfuprovince" value="">
+		<input type="hidden" name="wfucity" id="wfucity" value="">
+		<input type="hidden" name="wfismob" id="wfismob" value="">
+		<div class="wftitle" style="display: none;"></div>		
+		<!---------- 订购产品 ---------->
+		        <div class="wfwrap">			
+            <div class="wfwrapbox">
+								
+				<!---------- 产品套餐 ---------->
+				<div class="wfform-box">
+					<label class="wfform-label">订购产品</label>
+					<div class="wfform-pro radio">
+						<span class="down"><input type="radio" name="wfproduct" id="wfproduct1" onclick="total('down')" value="黑曜石" title="138" class="input-radio DanXun"><label for="wfproduct1">黑曜石<font style="color: red;padding-left: 8px;">(俸请两尊以上额外赠送砗磲招财手链)</font></label></span><span class="down"><input type="radio" name="wfproduct" id="wfproduct2" onclick="total('down')" value="冰种黑曜石" title="298" class="input-radio DanXun"><label for="wfproduct2">冰种黑曜石<font style="color: red;padding-left: 8px;">(法师推荐，俸请度极高，额外赠送砗磲招财手链)</font></label></span>					</div>
+				</div>
+				<!---------- 产品套餐 ---------->
+								<!---------- 产品尺码 ---------->
+				<div class="wfform-box">
+					<label class="wfform-label">生肖：</label>
+					<div class="wfform-pro radio">
+												<span class="down"><input type="checkbox"  name="wfproduct[]" id="wfproduct0" value="鼠（千手观音）" class="input-radio shuxiang" onclick=num()><label for="wfproduct0">鼠（千手观音）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct1" value="牛（虚空藏菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct1">牛（虚空藏菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct2" value="虎（虚空藏菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct2">虎（虚空藏菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct3" value="兔（文殊菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct3">兔（文殊菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct4" value="龙（普贤菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct4">龙（普贤菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct5" value="蛇（普贤菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct5">蛇（普贤菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct6" value="马（大势至菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct6">马（大势至菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct7" value="羊（大日如来）" class="input-radio shuxiang" onclick=num()><label for="wfproduct7">羊（大日如来）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct8" value="猴（大日如来）" class="input-radio shuxiang" onclick=num()><label for="wfproduct8">猴（大日如来）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct9" value="鸡（不动尊菩萨）" class="input-radio shuxiang" onclick=num()><label for="wfproduct9">鸡（不动尊菩萨）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct10" value="狗（阿弥陀佛）" class="input-radio shuxiang" onclick=num()><label for="wfproduct10">狗（阿弥陀佛）</label></span>
+												<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct11" value="猪（阿弥陀佛）" class="input-radio shuxiang" onclick=num()><label for="wfproduct11">猪（阿弥陀佛）</label></span>
+					</div>
+				</div>
+				<!---------- 产品尺码 ---------->			
+								
+												<!---------- 数量价格 ---------->
+				<div class="wfform-box">
+					<label class="wfform-label">数量</label>
+					<div class="wfform-opt wfnums">
+						<a onclick="numdec()" title="减1" class="dec"></a>
+						<input type="text" id="wfnums" name="wfnums" value="1" readonly>
+						<a onclick="numlnc()" title="加1" class="lnc"></a>
+						<strong><em class="rmb">&yen;</em><em id="showprice">0.00</em></strong>
+					</div>
+				</div>		
+				<!---------- 数量价格 ---------->
+							</div>            
+		</div>
+        		<!---------- 订购产品 ---------->
+		<!---------- 赠送产品 ---------->
+				<div class="wfwrap">
+			<div class="wfwrapbox">
+								<div class="wfform-box">
+					<label class="wfform-label red">赠送产品</label>
+					<div class="wfform-pro radio">
+						<span class="auto"><input type="radio" checked name="wfgiftname" id="wfgiftname" value="避邪符+护身符+招财符+平安符+开光证书+鉴定证书+精美礼盒" class="input-radio"><label for="wfgiftname">避邪符+护身符+招财符+平安符+开光证书+鉴定证书+精美礼盒</label></span>
+					</div>
+				</div>
+															</div>
+		</div>					
+				<!---------- 赠送产品 ---------->
+		<!---------- 表单主体 ---------->
+		<div class="wfwrap">			
+			<div class="wfwrapbox pt15">
+			<!---------- 表单选项 ---------->
+			<div class="wfform-box">
+				<label class="wfform-label">姓名</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfname" lay-verify="name" placeholder="请填写姓名" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">手机号码</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfmob" id="wfmob" lay-verify="mob" placeholder="请填写手机号码" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">所在地区</label>
+				<div class="wfform-opt area">
+					<span class="wfprovince"><select id="wfprovince" name="wfprovince" lay-verify="province" class="select"></select></span>
+					<span class="wfcity"><select id="wfcity" name="wfcity" lay-verify="city" class="select"></select></span>
+					<span class="wfarea"><select id="wfarea" name="wfarea" class="select"></select></span>	
+				</div>
+			</div><div class="wfform-box">
+				<label class="wfform-label">详细地址</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfaddress" lay-verify="address" placeholder="请填写详细地址" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">留言</label>
+				<div class="wfform-opt">
+					<textarea name="wfguest" placeholder="请尽快安排发货，送货之前手机联系，谢谢！" class="textarea"></textarea>
+				</div>
+			</div>
+				
+			<!---------- 表单选项 ---------->
+			<!---------- 付款方式 ---------->
+						<div class="wfform-box">
+				<label class="wfform-label">付款方式</label>
+				<div class="wfform-pro radio">				
+										<span class="auto"><input type="radio" checked name="wfpayment" id="wfpayment1" onclick="pay_total(1);paypstab(1)" value="cod" class="input-radio"><label for="wfpayment1">货到付款</label></span>
+										<span id="payps1" class="payps">温馨提示：选择货到付款在家等快递公司送货上门，先验货后付款！</span>
+										<span id="payps2" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps3" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps4" class="payps" style="display:none;">温馨提示：请选择您要在线付款的银行，在线支付，安全可靠！</span>
+										<span id="payps5" class="payps" style="display:none;">温馨提示：提交后请用你的手机登陆支付宝或微信扫描二维码完成付款！</span>
+										<span id="payps6" class="payps" style="display:none;">温馨提示：请拨打我们网站上的免费客服电话，索要银行汇款帐号。</span>
+									</div>
+			</div>
+						
+			<!---------- 付款方式 ---------->
+			<!---------- 验证码 ---------->
+						
+						<!---------- 验证码 ---------->
+			</div>
+		</div>
+		<!---------- 表单主体 ---------->
+		<div class="wfwrap">
+			<div class="wfform-box">
+				<button id="wfsubmit" lay-submit lay-filter="wfsubmit" class="wfbtn btn-g">立即提交订单</button>
+			</div>
+		</div>
+	</form>
+		<script type="text/javascript" src="../../wfpublic/js/wfscroll.js"></script>
+	<script type="text/javascript">$(function(){$('.wffahuo').myScroll({speed:40,rowHeight:55});});</script>
+	<div class="wftitle">发货通知</div>
+	<div class="wfwrap">
+		<div class="wfwrapbox">
+			<div class="wffahuo">
+				<ul>
+					<!-- 生成数量--最近几天--产品数组--发货通知模板 -->
+					<li><span><span class="showdate"></span></span> <span>新疆</span>的<span>郑**</span> <span>185****5864</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>云南</span>的<span>吴**</span> <span>177****8288</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>湖南</span>的<span>曾*</span> <span>139****2208</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>新疆</span>的<span>冯**</span> <span>133****5735</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>河南</span>的<span>彭**</span> <span>134****9662</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>黑龙江</span>的<span>曹**</span> <span>147****1337</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>上海</span>的<span>蔡**</span> <span>157****2429</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>山东</span>的<span>宋**</span> <span>133****6409</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>福建</span>的<span>萧**</span> <span>184****8782</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>江西</span>的<span>卢**</span> <span>147****2081</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>浙江</span>的<span>沉**</span> <span>147****8661</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>陕西</span>的<span>刘**</span> <span>188****2848</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>甘肃</span>的<span>杨**</span> <span>130****5230</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>青海</span>的<span>丁**</span> <span>147****8646</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>河南</span>的<span>蔡**</span> <span>186****5747</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>湖南</span>的<span>蒋**</span> <span>132****8307</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>广东</span>的<span>梁**</span> <span>133****5695</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>西藏</span>的<span>王**</span> <span>180****7568</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>西藏</span>的<span>傅**</span> <span>135****8206</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>青海</span>的<span>萧**</span> <span>151****4011</span> 您订购的商品已发货！</li><li><span><span class="showdate"></span></span> <span>天津</span>的<span>袁**</span> <span>189****2877</span> 您订购的商品已发货！</li>				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wfwrap">
+		<div class="wfwrapbox">
+			<div class="wfquery">
+				<form action="../../wfhome/wfquery.php" method="post" target="_top">
+					<input type="text" name="wfquecont" lay-verify="required" placeholder="请填写姓名或手机号" class="input-text">
+					<button class="wfbtn btn-o btn-que">查询</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div style="height:8px;"></div>			
+		
+</div>
+<script type="text/javascript" src="../../wfpublic/js/wfpost.js"></script>
+<script>
+	$('.DanXun').on('click',function(){
+		var a=$(this).val();
+		var b=$('.shuxiang').length;
+		for(var i=0;i<b;i++){
+			switch(i){
+				case 0:
+					$('.shuxiang').eq(0).val(a+"-鼠（千手观音）");
+					break;
+				case 1:
+					$('.shuxiang').eq(1).val(a+"-牛（虚空藏菩萨）");
+					break;
+				case 2:
+					$('.shuxiang').eq(2).val(a+"-虎（虚空藏菩萨）");
+					break;
+				case 3:
+					$('.shuxiang').eq(3).val(a+"-兔（文殊菩萨）");
+					break;
+				case 4:
+					$('.shuxiang').eq(4).val(a+"-龙（普贤菩萨）");
+					break;
+				case 5:
+					$('.shuxiang').eq(5).val(a+"-蛇（普贤菩萨）");
+					break;
+				case 6:
+					$('.shuxiang').eq(6).val(a+"-马（大势至菩萨）");
+					break;
+				case 7:
+					$('.shuxiang').eq(7).val(a+"-羊（大日如来）");
+					break;
+				case 8:
+					$('.shuxiang').eq(8).val(a+"-猴（大日如来）");
+					break;
+				case 9:
+					$('.shuxiang').eq(9).val(a+"-鸡（不动尊菩萨）");
+					break;
+				case 10:
+					$('.shuxiang').eq(10).val(a+"-狗（阿弥陀佛）");
+					break;
+				case 11:
+					$('.shuxiang').eq(11).val(a+"-猪（阿弥陀佛）");
+					break;
+			}
+			
+		}
+	})
+</script>
+</body>
+</html>

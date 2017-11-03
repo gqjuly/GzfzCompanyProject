@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>在线订购 - 金沙链子</title>
+<meta name="generator" content="WFPHP订单系统【高级版】">
+<meta name="author" content="系统开发者：WENFEI QQ：183712356">
+<meta name="copyright" content="WFPHP订单系统官网：WFORDER.COM">
+<script type="text/javascript" src="../../wfpublic/js/wfjq.js"></script>
+<script type="text/javascript" src="../../wfpublic/layui/layui.js"></script>
+<script type="text/javascript" src="../../wfpublic/js/wfjqcity.js"></script>
+<script type="text/javascript">
+    $("document").ready(function(){
+		$(".size a").click(function(){
+            var o=$(this);
+            if(!o.hasClass("cursize")){
+				$(".cursize").removeClass("cursize");
+				o.addClass("cursize");
+				$("#wfprosize").val(o.attr("data-size"));
+			}
+		});
+		$(".colour a").click(function(){
+			var o=$(this);
+			if(!o.hasClass("curcolour")){
+				$(".curcolour").removeClass("curcolour");
+				o.addClass("curcolour");
+				$("#wfprocolour").val(o.attr("data-colour"));
+            }
+		});
+	});
+</script>
+<link href="../../wftemplate/concise/images/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.wforder{max-width:950px;background:#FFFFFF;}
+.wfwrap{border:5px solid #990B0B;}
+.wfform{width:auto;margin-right:300px;}
+.wftitle{background:#990B0B;}
+@media screen and (max-width:749px){.wfform{margin-right:0;}.wffhwrap,.wfquewrap{position:static;width:100%;}}
+@media screen and (max-width:449px){.wfwrap{border:none;}}
+</style>
+</head>
+<body>
+<div class="wforder">
+	<div class="wftitle">在线快速订购</div>
+	<div class="wfwrap">
+		<form id="wfform" name="wfform" method="post" class="wfform" target="_top">
+			<input type="hidden" name="wfnotnull" value="35bf3f800c45046a68df">			
+			<input type="hidden" name="wfpid" value="7">
+			<input type="hidden" name="wftid" value="7">
+			<input type="hidden" name="WFDDURL" id="WFDDURL" value="">
+			<input type="hidden" name="wfproname" id="wfproname" value="金沙链子">
+												<input type="hidden" name="wfpayment" id="wfpayment" value="cod">
+			<input type="hidden" name="wfpayzk" id="wfpayzk" value="1">
+			<input type="hidden" name="wfproup" id="wfproup" value="298元">
+						
+			<input type="hidden" name="wfprice" id="wfprice" value="298.00">
+			<input type="hidden" name="wfuprovince" id="wfuprovince" value="">
+			<input type="hidden" name="wfucity" id="wfucity" value="">
+			<input type="hidden" name="wfismob" id="wfismob" value="">
+			<!---------- 产品套餐 ---------->
+						<div class="wfform-box">
+				<label class="wfform-label">订购产品</label>
+				<div class="wfform-pro radio">
+					<span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct1" checked onclick="total('checkbox')" value="龙头金项链+福金戒指+吊坠" title="298元" class="input-radio"><label for="wfproduct1">龙头金项链+福金戒指+吊坠</label></span><span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct2" onclick="total('checkbox')" value="竹节金项链+福金戒指+吊坠" title="298元" class="input-radio"><label for="wfproduct2">竹节金项链+福金戒指+吊坠</label></span><span class="down"><input type="checkbox" name="wfproduct[]" id="wfproduct3" onclick="total('checkbox')" value="佛珠金项链+福金戒指+吊坠" title="298元" class="input-radio"><label for="wfproduct3">佛珠金项链+福金戒指+吊坠</label></span>				</div>
+			</div>
+						<!---------- 产品套餐 ---------->
+			<!---------- 产品尺码 ---------->
+						<div class="wfform-box">
+				<label class="wfform-label">尺码</label>
+				<div class="wfform-pro radio">
+										<span class="down"><input type="radio" checked name="wfprosize" id="wfprosize0" value="龙牌正面吊坠" class="input-radio"><label for="wfprosize0">龙牌正面吊坠</label></span>
+										<span class="down"><input type="radio" name="wfprosize" id="wfprosize1" value="观音牌正面吊坠" class="input-radio"><label for="wfprosize1">观音牌正面吊坠</label></span>
+										
+				</div>
+			</div>
+						<!---------- 产品尺码 ---------->			
+			<!---------- 产品颜色 ---------->
+						<!---------- 产品颜色 ---------->
+			<!---------- 赠送产品 ---------->
+						<!---------- 赠送产品 ---------->
+			<!---------- 表单选项 ---------->
+						<!---------- 数量价格 ---------->
+			<div class="wfform-box">
+				<label class="wfform-label">数量</label>
+				<div class="wfform-opt wfnums">
+					<a onclick="numdec()" title="减1" class="dec"></a>
+					<input type="text" id="wfnums" name="wfnums" value="1" readonly>
+					<a onclick="numlnc()" title="加1" class="lnc"></a>
+					<strong><em class="rmb">&yen;</em><em id="showprice">298.00</em></strong>
+				</div>
+			</div>		
+			<!---------- 数量价格 ---------->
+			<div class="wfform-box">
+				<label class="wfform-label">姓名</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfname" lay-verify="name" placeholder="请填写姓名" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">手机号码</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfmob" id="wfmob" lay-verify="mob" placeholder="请填写手机号码" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">所在地区</label>
+				<div class="wfform-opt area">
+					<span class="wfprovince"><select id="wfprovince" name="wfprovince" lay-verify="province" class="select"></select></span>
+					<span class="wfcity"><select id="wfcity" name="wfcity" lay-verify="city" class="select"></select></span>
+					<span class="wfarea"><select id="wfarea" name="wfarea" class="select"></select></span>	
+				</div>
+			</div><div class="wfform-box">
+				<label class="wfform-label">详细地址</label>
+				<div class="wfform-opt">
+					<input type="text" name="wfaddress" lay-verify="address" placeholder="请填写详细地址" class="input-text">
+				</div>
+			</div>
+			<div class="wfform-box">
+				<label class="wfform-label">留言</label>
+				<div class="wfform-opt">
+					<textarea name="wfguest" placeholder="" class="textarea"></textarea>
+				</div>
+			</div>
+						
+			<!---------- 表单选项 ---------->
+			<!---------- 付款方式 ---------->
+						<div class="wfform-box">
+				<label class="wfform-label">付款方式</label>
+				<div class="wfform-pro radio">				
+										<span class="auto"><input type="radio" checked name="wfpayment" id="wfpayment1" onclick="pay_total(1);paypstab(1)" value="cod" class="input-radio"><label for="wfpayment1">货到付款</label></span>
+										<span id="payps1" class="payps">温馨提示：选择货到付款在家等快递公司送货上门，先验货后付款！</span>
+										<span id="payps2" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps3" class="payps" style="display:none;">温馨提示：全球领先的第三方支付平台，在线支付，安全可靠！</span>
+										<span id="payps4" class="payps" style="display:none;">温馨提示：请选择您要在线付款的银行，在线支付，安全可靠！</span>
+										<span id="payps5" class="payps" style="display:none;">温馨提示：提交后请用你的手机登陆支付宝或微信扫描二维码完成付款！</span>
+										<span id="payps6" class="payps" style="display:none;">温馨提示：请拨打我们网站上的免费客服电话，索要银行汇款帐号。</span>
+									</div>
+			</div>
+						
+			<!---------- 付款方式 ---------->
+			<!---------- 验证码 ---------->
+						
+						<!---------- 验证码 ---------->
+			<div class="wfform-box btnbox">
+				<button id="wfsubmit" lay-submit lay-filter="wfsubmit" class="wfbtn btn-g">立即提交订单</button>
+			</div>
+		</form>
+				<script type="text/javascript" src="../../wfpublic/js/wfscroll.js"></script>
+		<script type="text/javascript">$(function(){$('.wffahuo').myScroll({speed:40,rowHeight:55});});</script>
+		<div class="wffhwrap">
+			<div class="wftit-text"><span>发货通知</span></div>
+			<div class="wffahuo wffhcont">
+				<ul>
+					<!-- 生成数量--最近几天--产品数组--发货通知模板 -->
+					<li><span><span class="showdate"></span></span> <span>福建</span>的<span>谢**</span> <span>183****9191</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>广东</span>的<span>蒋**</span> <span>155****4592</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>天津</span>的<span>韩*</span> <span>133****8816</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>湖北</span>的<span>叶**</span> <span>177****7669</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>福建</span>的<span>林**</span> <span>155****9264</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>山东</span>的<span>冯**</span> <span>130****1340</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>浙江</span>的<span>曾*</span> <span>159****6159</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>广西</span>的<span>冯**</span> <span>187****7967</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>云南</span>的<span>苏**</span> <span>136****5601</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>江西</span>的<span>徐**</span> <span>183****3052</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>山西</span>的<span>何**</span> <span>184****9166</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>湖南</span>的<span>彭**</span> <span>134****7085</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>广西</span>的<span>曾*</span> <span>187****3208</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>广东</span>的<span>徐**</span> <span>155****4219</span> 您订购的<span>竹节金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>甘肃</span>的<span>李**</span> <span>147****8142</span> 您订购的<span>龙头金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>山西</span>的<span>彭**</span> <span>130****7594</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>天津</span>的<span>贾**</span> <span>139****1047</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>贵州</span>的<span>郑**</span> <span>134****5909</span> 您订购的<span>龙头金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>浙江</span>的<span>袁**</span> <span>188****7035</span> 您订购的<span>龙头金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>浙江</span>的<span>蔡**</span> <span>133****5298</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li><li><span><span class="showdate"></span></span> <span>甘肃</span>的<span>杨**</span> <span>187****3065</span> 您订购的<span>佛珠金项链+福金戒指+吊坠</span>已发货！</li>				</ul>
+			</div>
+			<div class="h10"></div>
+		</div>
+		<div class="wfquewrap">
+			<div class="wftit-text"><span>订单查询</span></div>
+			<div class="wfquery">
+				<form action="../../wfhome/wfquery.php" method="post" target="_top">
+					<input type="text" name="wfquecont" lay-verify="required" placeholder="请填写姓名或手机号" class="input-text">
+					<button class="wfbtn btn-o btn-que">查询</button>
+				</form>
+			</div>
+		</div>
+			</div>
+</div>
+<script type="text/javascript" src="../../wfpublic/js/wfpost.js"></script>
+</body>
+</html>
